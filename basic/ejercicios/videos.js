@@ -25,3 +25,13 @@ const str = `<ul>
 // Tip: Obtener un array de objetos, donde cada objeto sea un video
 // {min:5, seg: 59, tipo: 'Redux Video'}
 
+// ********* PARSEAR DATOS ********* //
+console.log(str.replace(`<li`,``));
+/* str.replace(`li>`,``);
+str.replace(`=`,`:`);
+str.replace(`</`,``);
+str.replace(`>`,` name: `); */
+
+/* let myArray = JSON.parse(str); */
+console.log(str);
+/******************************************************************/

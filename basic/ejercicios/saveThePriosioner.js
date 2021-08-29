@@ -15,10 +15,19 @@
  * @return el numero de prisionero que recibe la ultima golosina
  */
 const saveThePrisoner = function(n,m,s){ 
-     
+      let vueltasCompletas = (m * 1)/ n ; 
+      vueltasCompletas = Math.trunc(vueltasCompletas);
+      let prisionerosConC = n * vueltasCompletas;
+      let prisionerosSinC = m - prisionerosConC;
+      let veneno = prisionerosSinC + (s - 1);
+      return veneno;   
 }
+
+console.log('Pricionero con Veneno, posición: '+ saveThePrisoner(7,19,2));
 
 // TEST TDD
 console.log(saveThePrisoner(5,2,1) === 2);
+console.log(saveThePrisoner(5,3,2) === 4);
 console.log(saveThePrisoner(7,19,2) === 6);
 console.log(saveThePrisoner(3,7,3) === 3);
+console.log(saveThePrisoner(3,7,3) === 2);
