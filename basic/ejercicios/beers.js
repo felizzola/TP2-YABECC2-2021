@@ -58,16 +58,6 @@ const beers = [
 ];
 
 // Resolucion:
-const beersWithPrice = [];
-const beersWithFileNameAndPrice = [];
-const beersOrderByType = [];
-
-function createArrays(arr1, arr2){
-for (let i = 0; i < arr2.length; i++) {
-  const element = arr2[i];
-  arr1.push(element);
-}
-};
 
 // ********** Part 1 **********
 function getPrice(beer) {
@@ -84,78 +74,53 @@ function getPrice(beer) {
 
 function getBeersWithProperties() {
   return beers.map((beer) => ({
-      name: beer.name,
-      abv: beer.abv,
-      label: beer.label,
-      type: beer.type,
-      price: getPrice(beer),
-    }));
+    name: beer.name,
+    abv: beer.abv,
+    label: beer.label,
+    type: beer.type,
+    price: getPrice(beer),
+  }));
 }
-/* 
-Array.prototype.push.apply(beersWithPrice, getBeersWithProperties()); */
-createArrays(beersWithPrice, getBeersWithProperties());
 
 console.log('---------------------------------------------------------------');
 console.log("NEW BEERS ARRAY WITH PRICE:");
 console.log('---------------------------------------------------------------');
-console.log(beersWithPrice); 
-
+console.log(getBeersWithProperties());  
 
 /*****************************************************************************************************************************/
 // ********** Part 2 **********
 
-createArrays(beersWithFileNameAndPrice, beersWithPrice);
-
-function fileName(string){
-
+function fileName(string) {
   let labelSize = string.length;
-  let since = string.lastIndexOf('/') + 1;
+  let since = string.lastIndexOf("/") + 1;
   let file_name = string.substring(since, labelSize);
   return file_name;
+}
 
-};
-
-function addFileName(list){
-
-  list.forEach(element => {
-    element.file_name = fileName(element.label);    
+function addFileName(list) {
+  return list.forEach((element) => {
+    element.file_name = fileName(element.label);
   });
+}
 
-};
-
-addFileName(beersWithFileNameAndPrice);
+addFileName(beers);
 
 console.log('---------------------------------------------------------------');
 console.log("NEW BEERS ARRAY WITH PRICE AND FILE:");
 console.log('---------------------------------------------------------------');
-console.log(beersWithFileNameAndPrice);   
+console.log(beers);   
 
 /*****************************************************************************************************************************/
 
 // ********** Part 3 **********
 
-/* function compare(a,b){
- (a > b)? 1 :((a < b)? -1 : 0);
-} */
+function orderBy(list, argument) {
+  return list.sort((a, b) => (a[argument] > b[argument] ? 1 : -1));
+}
 
-  beers.sort((a, b) => {
-  let type1 = a.type.toUpperCase();
-  let type2 = b.type.toUpperCase();
-
-  if(type1 > type2)
-  {
-    return 1;
-  } 
-   if(type1 < type2)
-   {
-    return -1;
-   }
-    return 0;
-}); 
-
-console.log('---------------------------------------------------------------');
+console.log("---------------------------------------------------------------");
 console.log("Beers ORDER BY TYPE:");
-console.log('---------------------------------------------------------------');
-console.log(beers);
+console.log("---------------------------------------------------------------");
+console.log(orderBy(beers,'type'));
 
 /*****************************************************************************************************************************/
