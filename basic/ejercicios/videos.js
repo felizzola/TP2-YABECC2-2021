@@ -26,6 +26,7 @@ const str = `<ul>
 // {min:5, seg: 59, tipo: 'Redux Video'}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ********* PARSEAR DATOS ********* //
 console.log(str.replace(`<li`,``));
 /* str.replace(`li>`,``);
@@ -50,6 +51,21 @@ function getVideos(str){
     }));
 }
 
+=======
+function getVideos(str){
+  return str
+    .replace('<ul>', '')
+    .replace('</ul>','')
+    .split('</li>')
+    .slice(0,-1)
+    .map(video => ({
+        min:parseInt(video.split('"')[1].split(':')[0]), 
+        seg:parseInt(video.split('"')[1].split(':')[1]),
+        tipo:video.split('>')[1]
+    }));
+}
+
+>>>>>>> e067b5182c27189f7ecddd0f8af2d69eb185de5b
 function getTotalSegundos(videos, tipo){
   //let totalSegundos = 0;
   return videos
@@ -64,4 +80,7 @@ function getTotalSegundos(videos, tipo){
 
 console.log(getVideos(str));
 console.log(getTotalSegundos(getVideos(str), 'Flexbox Video'));
+<<<<<<< HEAD
 >>>>>>> upstream/master
+=======
+>>>>>>> e067b5182c27189f7ecddd0f8af2d69eb185de5b
