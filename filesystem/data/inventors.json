@@ -1,12 +1,6 @@
 {
  "inventors": [
   {
-   "_id": 1,
-   "first": "Albert",
-   "last": "Einstein",
-   "year": 1879
-  },
-  {
    "_id": 2,
    "first": "Isaac",
    "last": "Newton",
@@ -14,9 +8,9 @@
   },
   {
    "_id": 3,
-   "first": "Galileo",
-   "last": "Galilei",
-   "year": 1564
+   "first": "andrea",
+   "last": "felizzola",
+   "year": 1989
   },
   {
    "_id": 4,

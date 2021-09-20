@@ -13,13 +13,45 @@ const UserData = require('./user');
 // InventorData.pushInventor(inventor);
 
 // console.log(InventorData.getInventors());
+/* 
+{
+    "_id": 3,
+    "first": "Galileo",
+    "last": "Galilei",
+    "year": 1564
+   }, */
 
-const user = {
-    "name":"Juan Perez",
-    "email":"juanperez@gameofthron.es",
-    "password":"abc123"
+
+//const user = {
+//    "name":"Juan Perez",
+//    "email":"juanperez@gameofthron.es",
+//    "password":"abc123"
+//}
+
+//console.log(UserData.pushUser(user));
+
+//const inventor2 = {"_id" : 3 , "first" : "andrea" , "last" : "felizzola" , "year" : 1989 };
+
+//InventorData.updateIventor(3, inventor2);
+//console.log("*****UPDATE OF INVENTOR*****");
+//console.log(InventorData.getInventors());
+ 
+/*  const user2 = {
+    "_id": "59b99dcdcfa9a34dcd7885e7",
+    "name": "Andrea Felizzola",
+    "email": "felizzolandre@gmail.com",
+    "password": "fruit"
 }
 
-console.log(UserData.pushUser(user));
+UserData.updateUser(user2);
+console.log("*****UPDATE OF USER*****");  
+console.log(UserData.getUsers()); */
 
+/* UserData.deleteUser("59b99dbbcfa9a34dcd7885c3");
+console.log("*****DELETE USER*****");  
+console.log(UserData.getUsers());  */
 
+InventorData.deleteInventor(1);
+console.log("*****DELETE INVENTOR*****");
+console.log(InventorData.getInventors());
+ 

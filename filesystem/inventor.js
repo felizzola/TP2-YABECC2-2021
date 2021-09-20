@@ -4,6 +4,7 @@ const PATH = './data/inventors.json';
 
 // Lectura
 function getInventors(){
+    // return fs.readFileSync(PATH, 'utf-8');
     let data = fs.readFileSync(PATH, 'utf-8');
     let dataInventors = JSON.parse(data);
     return dataInventors.inventors;
@@ -23,16 +24,25 @@ function pushInventor(inventor){
 }
 
 // Modificacion 
-function updatIventor(id, inventor){
+function updateIventor(id, inventor){
     //TODO: Se los dejo como ejercicio
     // findIndex
+    let inventors = getInventors();
+    let inventorIndex = inventors.findIndex((inventor => inventor._id == id));
+    inventors[inventorIndex].first = inventor.first;
+    inventors[inventorIndex].last = inventor.last;
+    inventors[inventorIndex].year = inventor.year;
+    fs.writeFileSync(PATH, JSON.stringify({inventors:inventors}, null, ' '));
 }
 
 // Eliminacion
 function deleteInventor(id){
     //TODO: Se los dejo como ejercicio
     // slice, filter
+    let inventors = getInventors();
+    inventors = inventors.filter((inventor => inventor._id != id));
+    fs.writeFileSync(PATH, JSON.stringify({inventors:inventors}, null, ' '));
 }
 
-module.exports = {getInventor, getInventors, pushInventor, deleteInventor, updatIventor};
+module.exports = {getInventor, getInventors, pushInventor, deleteInventor, updateIventor};
 

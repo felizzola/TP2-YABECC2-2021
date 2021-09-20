@@ -30,11 +30,22 @@ function pushUser(user){
 // update
 function updateUser(user){
     //TODO: Para ejercicio
+    let users = getUsers();
+    let userIndex = users.findIndex((element => element._id == user._id));
+    users[userIndex].name = user.name;
+    users[userIndex].email = user.email;
+    users[userIndex].password = user.password;
+    fs.writeFileSync(PATH, JSON.stringify(users, null, ' '));
 }
 
 // delete
 function deleteUser(id){
     //TODO: Para ejercitar
+    // slice
+    let users = getUsers();
+    let userIndex = users.findIndex((user => user._id == id));
+    users.splice(userIndex,1);
+    fs.writeFileSync(PATH, JSON.stringify(users, null, ' '));
 }
 
 module.exports = {getUser, getUsers, getUserbyEmail, pushUser, updateUser, deleteUser};

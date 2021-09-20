@@ -12,12 +12,6 @@
   "password": "$2b$12$qM.YvmiekyYYY7p7phpK3OicbRCDkN7ESwYAnG/o9YnfHC0Mhkmbi"
  },
  {
-  "_id": "59b99dbbcfa9a34dcd7885c3",
-  "name": "Theon Greyjoy",
-  "email": "alfie_allen@gameofthron.es",
-  "password": "$2b$12$x574mziridS3mEQVTbKbY.lK.ngIDyZJnTw17G7Gk6n4lnWVSrWL."
- },
- {
   "_id": "59b99dc9cfa9a34dcd7885df",
   "name": "Roose Bolton",
   "email": "michael_mcelhatton@gameofthron.es",
@@ -31,9 +25,9 @@
  },
  {
   "_id": "59b99dcdcfa9a34dcd7885e7",
-  "name": "Ros",
-  "email": "esme_bianco@gameofthron.es",
-  "password": "$2b$12$dpUAAVPghWXEu0pg0Kv9rOP9bZexMblG911BJzJD/2HOuMat6ZsOe"
+  "name": "Andrea Felizzola",
+  "email": "felizzolandre@gmail.com",
+  "password": "fruit"
  },
  {
   "_id": "59b99dcecfa9a34dcd7885ea",
