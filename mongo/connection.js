@@ -3,6 +3,7 @@ import {MongoClient} from 'mongodb';
 
 // TODO: llevar a variables de entorno.
 //const uri = "mongodb+srv://admin:tp2@cluster0.3bm3a.azure.mongodb.net/sample_tp2?retryWrites=true&w=majority";
+const uri = "mongodb+srv://felizzola:34963098dni@cluster0.lbi9n.mongodb.net/sample_tp2?retryWrites=true&w=majority";
 const DB_TP = "sample_tp2";
 //const COLLECTION_INVENTORS = "inventors1111";
 
@@ -19,6 +20,7 @@ async function getConnection(){
     }
     return instance;
 }
+
 // client.connect(async err => {
 //     const inventors = await client
 //         .db("sample_tp2")
@@ -29,5 +31,20 @@ async function getConnection(){
 //   // perform actions on the collection object
 //     client.close();
 // });
+
+// const { MongoClient } = require('mongodb'); 
+//import {MongoClient} from 'mongodb';
+//const uri = "mongodb+srv://felizzola:34963098dni@cluster0.lbi9n.mongodb.net/sample_tp2?retryWrites=true&w=majority";
+//const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+//client.connect(async err => {
+//  const collection = await client
+//       .db("sample_tp2")
+//        .collection("inventors")
+//        .find()
+//        .toArray();
+//        console.log(inventors);
+//  // perform actions on the collection object
+//  client.close();
+//});
 
 export {getConnection}
