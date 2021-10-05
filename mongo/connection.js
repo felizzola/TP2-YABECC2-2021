@@ -3,7 +3,7 @@ import {MongoClient} from 'mongodb';
 
 // TODO: llevar a variables de entorno.
 //const uri = "mongodb+srv://admin:tp2@cluster0.3bm3a.azure.mongodb.net/sample_tp2?retryWrites=true&w=majority";
-const uri = "mongodb+srv://felizzola:34963098dni@cluster0.lbi9n.mongodb.net/sample_tp2?retryWrites=true&w=majority";
+//********const uri = "mongodb+srv://felizzola:34963098dni@cluster0.lbi9n.mongodb.net/sample_tp2?retryWrites=true&w=majority";
 const DB_TP = "sample_tp2";
 //const COLLECTION_INVENTORS = "inventors1111";
 
