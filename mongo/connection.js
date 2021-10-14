@@ -17,7 +17,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 let instance = null;
 async function getConnection(){
-    if(instance == null){
+    if(instance == null){ /* Singleton */
         try {
             instance = client.connect();
         } catch (error) {
